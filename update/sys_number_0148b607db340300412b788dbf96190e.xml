@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_82096_hotel_check_in">x_82096_hotel_check_in</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>CHE</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-08-30 06:07:47</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>0148b607db340300412b788dbf96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CHE</sys_name>
+        <sys_package display_value="hotel" source="x_82096_hotel">cc48f6cfdbf00300412b788dbf961924</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hotel">cc48f6cfdbf00300412b788dbf961924</sys_scope>
+        <sys_update_name>sys_number_0148b607db340300412b788dbf96190e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-08-30 06:07:47</sys_updated_on>
+    </sys_number>
+</record_update>

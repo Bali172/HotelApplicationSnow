@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_82096_hotel.QuickQuery1</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>QuickQuery1</name>
+        <script><![CDATA[var QuickQuery1 = Class.create();
+QuickQuery1.prototype = Object.extendsObject(hotel.AbstractAjaxProcessor, {
+	
+	getField: function() {
+		//gs.log('the', '1234');
+		//return true;
+// 		gs.log('the ='+this.getParameter('sysparm_sys_id'), '1234');
+		var sysID = this.getParameter('sysparm_sys_id');
+		gs.log('sysIDf = '+sysID, '1234');
+        var gr1 = new GlideRecord('x_82096_hotel_guest');
+		gr1.addQuery('sys_id', this.getParameter('sysparm_sys_id'));
+		gr1.query();
+		if(gr1.next()){
+		//gs.log('the '+gr1.vip, '1234');		
+		return true;
+		}
+   },
+	
+    type: 'QuickQuery1'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-06 18:27:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fd5def09db120300412b788dbf961930</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>QuickQuery1</sys_name>
+        <sys_package display_value="hotel" source="x_82096_hotel">cc48f6cfdbf00300412b788dbf961924</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hotel">cc48f6cfdbf00300412b788dbf961924</sys_scope>
+        <sys_update_name>sys_script_include_fd5def09db120300412b788dbf961930</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-06 19:00:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

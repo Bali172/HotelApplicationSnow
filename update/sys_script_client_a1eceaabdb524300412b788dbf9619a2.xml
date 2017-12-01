@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>caller_id</field>
+        <global>true</global>
+        <messages/>
+        <name>SetsCaller as Assigned to</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading) {
+	   if('state'==2){
+         g_form.setDisplay('category', false);   
+		   		   //g_form.setVisible('impact',false);
+
+	   }
+      //g_form.hideRelatedList('task_sla');
+	   return;
+   }
+	//alert(g_form.getReference('assignment_group').name());
+	//g_form.addOption('u_nested','4','Nested5');
+	if(g_form.getValue('priority')==1)
+	g_form.showFieldMsg('priority','This is a Critial incident','info');
+		g_form.showFieldMsg('assignment_group','This is a Critial incident'+'','info');
+	g_form.addOption('state','11','Pending');
+	g_form.addOption('state','12','Resume');
+
+	if(newValue!=''){
+	g_form.setValue('assigned_to',newValue);
+			g_form.addInfoMessage(newValue);
+	}
+	else{
+		g_form.setValue('company','');
+		g_form.clearValue('assigned_to');
+		//g_form.clearValue('company');
+		g_form.addInfoMessage(newValue+'THis is a null Value');
+	}
+
+   //Type appropriate comment here, and begin script below
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-14 08:12:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a1eceaabdb524300412b788dbf9619a2</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>SetsCaller as Assigned to</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="hotel" source="x_82096_hotel">cc48f6cfdbf00300412b788dbf961924</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hotel">cc48f6cfdbf00300412b788dbf961924</sys_scope>
+        <sys_update_name>sys_script_client_a1eceaabdb524300412b788dbf9619a2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-27 17:27:10</sys_updated_on>
+        <table>incident</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>comments</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-08 13:35:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_data_policy display_value="Must have comment if in past">911670f1db920300412b788dbf9619d0</sys_data_policy>
+        <sys_id>c9fd70f5db920300412b788dbf9619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>comments</sys_name>
+        <sys_package display_value="hotel" source="x_82096_hotel">cc48f6cfdbf00300412b788dbf961924</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hotel">cc48f6cfdbf00300412b788dbf961924</sys_scope>
+        <sys_update_name>sys_data_policy_rule_c9fd70f5db920300412b788dbf9619be</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-08 13:35:18</sys_updated_on>
+        <table>x_82096_hotel_check_in</table>
+    </sys_data_policy_rule>
+</record_update>

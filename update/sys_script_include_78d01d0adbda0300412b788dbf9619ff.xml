@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_82096_hotel.guestsWithReservations</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>guestsWithReservations</name>
+        <script><![CDATA[function guestsWithReservations() {
+    var a=[];
+	var res= new GlideRecord('x_82096_hotel_m2m_guests_reservations');
+	res.query();
+	while(res.next()){
+		a.push(res.guest+' ');
+	}
+	 var au = new ArrayUtil();
+	return au.unique(a);
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-09 09:43:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>78d01d0adbda0300412b788dbf9619ff</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>guestsWithReservations</sys_name>
+        <sys_package display_value="hotel" source="x_82096_hotel">cc48f6cfdbf00300412b788dbf961924</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hotel">cc48f6cfdbf00300412b788dbf961924</sys_scope>
+        <sys_update_name>sys_script_include_78d01d0adbda0300412b788dbf9619ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-09 09:45:58</sys_updated_on>
+    </sys_script_include>
+</record_update>

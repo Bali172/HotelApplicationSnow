@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Clean on end of reservation</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2017-11-15 18:35:18</run_start>
+        <run_time>1970-01-01 20:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var res=new GlideRecord('x_82096_hotel_reservation');
+res.addQuery('departure',gs.now());//Now makes it select the run as on day to day basis
+res.addNotNullQuery('room');
+res.query();
+while(res.next()){
+	gs.eventQueue('x_82096_hotel.room.reservation_end',res.room.getRefRecord());//This adds every Reord falling under category to trigger event -here event produces mail of reservation that ended today	
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-15 19:01:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b1c58e08dbe60300412b788dbf961954</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Clean on end of reservation</sys_name>
+        <sys_package display_value="hotel" source="x_82096_hotel">cc48f6cfdbf00300412b788dbf961924</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hotel">cc48f6cfdbf00300412b788dbf961924</sys_scope>
+        <sys_update_name>sysauto_script_b1c58e08dbe60300412b788dbf961954</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-15 19:01:23</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

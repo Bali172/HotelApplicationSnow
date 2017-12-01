@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_gauge_counts">
+    <sys_gauge_counts action="INSERT_OR_UPDATE">
+        <gauge_id display_value="Maintenance">1fb1722cdb2e0300412b788dbf96199f</gauge_id>
+        <image/>
+        <name>Hiigh proirity </name>
+        <omit_line>true</omit_line>
+        <order>20</order>
+        <override_style/>
+        <query table="x_82096_hotel_maintenance">active=true^priority&gt;2^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="priority" goto="false" newquery="false" operator="&gt;" or="false" value="2"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </query>
+        <script/>
+        <short_description>Of those ,how many are higher priority</short_description>
+        <sys_class_name>sys_gauge_counts</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-17 11:09:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dd32b260db2e0300412b788dbf9619c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hiigh proirity </sys_name>
+        <sys_package display_value="hotel" source="x_82096_hotel">cc48f6cfdbf00300412b788dbf961924</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hotel">cc48f6cfdbf00300412b788dbf961924</sys_scope>
+        <sys_update_name>sys_gauge_counts_dd32b260db2e0300412b788dbf9619c3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-17 11:09:26</sys_updated_on>
+        <tablename>x_82096_hotel_maintenance</tablename>
+        <use_script>false</use_script>
+    </sys_gauge_counts>
+</record_update>

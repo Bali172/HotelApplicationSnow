@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Room Maintenance">6f4fe245dbb20300412b788dbf961985</category>
+        <order>1</order>
+        <property display_value="x_82096_hotel.room.maintenance" name="x_82096_hotel.room.maintenance">91be6a05dbb20300412b788dbf961951</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-12-01 10:27:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a0afe285dbb20300412b788dbf9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_82096_hotel.room.maintenance.Room Maintenance</sys_name>
+        <sys_package display_value="hotel" source="x_82096_hotel">cc48f6cfdbf00300412b788dbf961924</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hotel">cc48f6cfdbf00300412b788dbf961924</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_a0afe285dbb20300412b788dbf9619a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-12-01 10:27:48</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

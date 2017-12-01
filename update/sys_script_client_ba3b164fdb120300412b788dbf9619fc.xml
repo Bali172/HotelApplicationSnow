@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>state</field>
+        <global>true</global>
+        <messages/>
+        <name>Training Servie now Script</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+	   g_form.addInfoMessage(g_form.getValue('state'));
+      //if(g_form.getValue('state')=='2'){
+		  g_form.setDisplay('priority', false);
+		  //g_form.setDisplay('location',false);
+		  
+	  //}
+   }
+	/*if(g_form.isMandatory('company')){
+	alert("Company is mandatory field");
+	}
+	else
+		alert("Not mandatory");*/
+	//g_form.setReadOnly('urgency',true);
+	if(newValue==='2'){
+		
+		g_form.setValue('cmdb_ci','0c43bab9c61122750182c13266df9d09');
+	}
+	else{
+		g_form.clearValue('cmdb_ci');
+	}
+
+   //Type appropriate comment here, and begin script below
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-11-12 17:41:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ba3b164fdb120300412b788dbf9619fc</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Training Servie now Script</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="hotel" source="x_82096_hotel">cc48f6cfdbf00300412b788dbf961924</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="hotel">cc48f6cfdbf00300412b788dbf961924</sys_scope>
+        <sys_update_name>sys_script_client_ba3b164fdb120300412b788dbf9619fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-11-14 07:42:25</sys_updated_on>
+        <table>incident</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

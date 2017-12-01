@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="iterativeDelete=true,text_index_translations" defaultsort="-1" label="Group" max_length="40" name="sys_user_group" text_index="true" type="collection">
+        <element label="Maintenance" max_length="40" name="x_82096_hotel_maintainance" type="boolean"/>
+    </element>
+</database>
